@@ -1,0 +1,361 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+}
+
+body.dark-mode .container {
+    background: #0f3460;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .section {
+    background: #16213e;
+    border-left-color: #e94560;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #eee;
+}
+
+body.dark-mode #jobTitle,
+body.dark-mode #greeting {
+    color: #aaa;
+}
+
+body.dark-mode button {
+    background: #e94560;
+}
+
+body.dark-mode button:hover {
+    background: #c23b52;
+    transform: translateY(-2px);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #1a1a2e;
+    color: #eee;
+    border-color: #e94560;
+}
+
+body.dark-mode .skills-list li {
+    background: #e94560;
+}
+
+body.dark-mode .footer {
+    border-top-color: #e94560;
+}
+
+body.dark-mode label {
+    color: #eee;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #667eea;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    transition: font-size 0.3s ease;
+}
+
+#jobTitle {
+    font-size: 1.3em;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+    transition: font-size 0.3s ease;
+}
+
+#greeting {
+    font-size: 1.1em;
+    color: #667eea;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Sections */
+.section {
+    background: #f9f9f9;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    transition: font-size 0.3s ease;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 15px;
+    transition: font-size 0.3s ease;
+}
+
+/* Skills Section */
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #5568d3;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.skills-list li {
+    background: #667eea;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skills-list li.hidden {
+    display: none;
+}
+
+/* Experience */
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item p {
+    margin: 5px 0;
+}
+
+/* Contact Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.character-count {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #667eea;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #667eea;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+/* Font Size Classes */
+body.font-large {
+    font-size: 18px;
+}
+
+body.font-large h1 {
+    font-size: 3em;
+}
+
+body.font-large h2 {
+    font-size: 2.2em;
+}
+
+body.font-large #jobTitle {
+    font-size: 1.6em;
+}
+
+body.font-small {
+    font-size: 14px;
+}
+
+body.font-small h1 {
+    font-size: 2em;
+}
+
+body.font-small h2 {
+    font-size: 1.5em;
+}
+
+body.font-small #jobTitle {
+    font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    .controls {
+        gap: 5px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
